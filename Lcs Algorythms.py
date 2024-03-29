@@ -5,9 +5,9 @@ import string
 import time
 
 
+##Algoritmo bruteforce
 
-
-'''def Lcs_bruteforce(X,Y):
+def Lcs_bruteforce(X,Y):
     if len(X)==0:
         return 0
     maxi=0
@@ -18,15 +18,12 @@ import time
             maxi=len(X)
     return maxi        
     
-'''    
+    
 
 
-X = ''.join(random.choices(string.ascii_letters + string.digits, k=10))
-Y=''.join(random.choices(string.ascii_letters + string.digits, k=10))
-print(X)
-print(Y)
 
 
+##Algoritmo ricorsivo
 def Lcs_recursive(X,Y):
     m=len(X)
     n=len(Y)
@@ -37,7 +34,7 @@ def Lcs_recursive(X,Y):
     else: 
         return max(Lcs_recursive(X,Y[:-1]),Lcs_recursive(X[:-1],Y))
     
-  
+##Algoritmo ricorsivo con memoization
 def Lcs_recursive_memoization(X,Y):
     m=len(X)
     n=len(Y)
@@ -60,8 +57,8 @@ def Lcs_rec_mem_aux(X,Y,x,y,lens):
  
 
 
-
-'''def LCS_Length(X, Y):
+##Algoritmo iterativo
+def LCS_Length(X, Y):
     m = len(X)
     n = len(Y)
     b = [["" for _ in range(n)] for _ in range(m)]
@@ -87,22 +84,4 @@ def Lcs_rec_mem_aux(X,Y,x,y,lens):
     return c, b
 
 
-'''
 
-start_time = time.time()
-A= 'Cm4b'
-B='Pb4i'
-c = Lcs_recursive_memoization(X, Y)
-d=Lcs_recursive(X,Y)
-'''print("Matrice c:")
-for row in c:
-    print(row)
-print("\nMatrice b:")
-for row in b:
-    print(row)
-'''
-#print(Lcs_bruteforce(X,Y))
-end_time = time.time() 
-elapsed_time = end_time - start_time
-print(elapsed_time,c)
-print(elapsed_time,d)
