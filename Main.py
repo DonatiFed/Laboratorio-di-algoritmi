@@ -4,7 +4,6 @@
 ##2)esegue test algoritmo ricorsivo
 ##3)esegue test algoritmo ricorsivo con memoization
 ##4)esegue test algoritmo iterativo
-
-import Lcs_Tests.py
-Lcs_Tests.eseguiTest(2)
+from Lcs_Tests import*
+eseguiTest(1)
 

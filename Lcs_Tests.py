@@ -192,4 +192,3 @@ def eseguiTest(a):
     else:
         print("Inserire un valore compreso tra 1 e 4")
 
-eseguiTest(1)
